@@ -1,3 +1,38 @@
+<?php 
+function notif($r1,$r2,$r3,$r4,$r5,$r6,$r7){
+      ?>
+                      <div class="col-sm-12">
+                      <div class="alert <?php echo $r1; ?> alert-dismissible fade show" role="alert">
+                        <span class="badge badge-pill <?php echo $r2; ?>"><?php echo $r3; ?></span> <?php echo $r4; ?>.
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      </div>
+
+                      <div class="col-lg-12">
+                          <div class="card">
+                              <div class="card-header">
+                                  <strong>Proses</strong> Edit My Profile
+                                  </div>
+                                  <div class="card-body card-block">
+
+
+                      <form action="<?php echo $r5; ?><?php echo $r6; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">    
+                         
+                              <button type="submit" class="btn btn-primary btn-sm" href= >
+                                 <?php echo $r7; ?>
+                                </button>
+                                </form>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                  <?php
+
+      }
+      ?>
+
 <div class="breadcrumbs">
             <div class="col-sm-4">
                 <div class="page-header float-left">
@@ -45,176 +80,62 @@ include "../koneksi.php";
                 $update = $db->query("UPDATE pengguna SET password='$password_baru' WHERE username='$username'");
                 if($update)
                 {
-                ?>
-                <div class="col-sm-12">
-                <div class="alert  alert-success alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-success">Selamat!</span> Password berhasil diedit.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit My Profile
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=user-profile" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-home"></i> Dashboard
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-                    
-                <?php
+                    $not1 = "badge-success";
+                    $not2 = "Selamat!";
+                    $not3 = "Password Berhasil diedit.";
+                    $not4 = "index.php?page=user-profile";
+                    $not5 = "";
+                    $not6 = "Lihat Hasil";
+                    $not7 = "alert-success";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
                 }
                 else
                 {
-                ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-danger alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-danger">Gagal!</span> Gagal merubah password.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-                
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit My Profile
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=user-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-
-                <?php
+                    $not1 = "badge-danger";
+                    $not2 = "Gagal!";
+                    $not3 = "Gagal merubah password.";
+                    $not4 = "index.php?page=user-edit";
+                    $not5 = "";
+                    $not6 = "Kembali";
+                    $not7 = "alert-danger";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
                 }
 
             }
             else
             {
-            ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Konfirmasi password tidak cocok.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit My Profile
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=user-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-               
-            
-            <?php
+                    $not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Konfirmasi password tidak cocok.";
+                    $not4 = "index.php?page=user-edit";
+                    $not5 = "";
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
             }
         }
         else
         {
-        ?>
-
-             <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Minimal password baru adalah 5 karakter.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit My Profile
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=user-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-        
-        <?php
+                    $not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Minimal password baru adalah 5 karakter.";
+                    $not4 = "index.php?page=user-edit";
+                    $not5 = "";
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
         }
     }
     else
     {
-    ?>
-
-         <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Password lama tidak cocok.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit My Profile
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=user-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-    <?php
+                    $not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Password lama tidak cocok.";
+                    $not4 = "index.php?page=user-edit";
+                    $not5 = "";
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     }
 
 ?>
