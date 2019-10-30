@@ -1,3 +1,38 @@
+<?php 
+function notif($r1,$r2,$r3,$r4,$r5,$r6,$r7){
+      ?>
+                      <div class="col-sm-12">
+                      <div class="alert <?php echo $r1; ?> alert-dismissible fade show" role="alert">
+                        <span class="badge badge-pill <?php echo $r2; ?>"><?php echo $r3; ?></span> <?php echo $r4; ?>.
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      </div>
+
+                      <div class="col-lg-12">
+                          <div class="card">
+                              <div class="card-header">
+                                  <strong>Proses</strong> Edit Data
+                                  </div>
+                                  <div class="card-body card-block">
+
+
+                      <form action="<?php echo $r5; ?><?php echo $r6; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">    
+                         
+                              <button type="submit" class="btn btn-primary btn-sm" href= >
+                                 <?php echo $r7; ?>
+                                </button>
+                                </form>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                  <?php
+
+      }
+      ?>
+
 <div class="breadcrumbs">
             <div class="col-sm-4">
                 <div class="page-header float-left">
@@ -42,350 +77,131 @@ if (isset($_GET['id']) AND isset($_POST['no_surat']) AND isset($_POST['t_diterim
 
       if(empty($no_surat))
   {
-    ?>
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Nomor Surat Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+  					$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Nomor Surat Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
   }
   else
   {
     if(empty($t_diterima))
     {
-      ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Tanggal Diterima Surat Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+    				$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Tanggal Diterima Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     } 
   else
   {
     if(empty($t_surat))
     {
-      ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Tanggal Surat Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+    				$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Tanggal Surat Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     }
     else
   {
     if(empty($perihal))
     {
-      ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Perihal Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+    				$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Perihal Surat Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     }
     else
   {
     if(empty($isi_surat))
     {
-      ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Isi Surat Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+    				$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Isi Surat Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     }
     else
   {
     if(empty($alamat_pengirim))
     {
-      ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Pengirim Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+    				$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Alamat Pengirim Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     }
     else
   {
     if(empty($waktu))
     {
-      ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Waktu Surat Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+    				$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Waktu Surat Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     }
     else
   {
     if(empty($tempat))
     {
-      ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Tempat Surat Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+    				$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Tempat Surat Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     }
     else
   {
     if(empty($lampiran))
     {
-      ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Lampiran Surat Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+    				$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Lampiran Surat Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     }
     else
   {
     if(empty($keterangan))
     {
-      ?>
-
-                <div class="col-sm-12">
-                <div class="alert  alert-warning alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-warning">Warning!</span> Keterangan Surat Harus Diisi.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Proses</strong> Edit Data
-                            </div>
-                            <div class="card-body card-block">
-
-
-                <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-            <?php
+    				$not1 = "badge-warning";
+                    $not2 = "Warning!";
+                    $not3 = "Keterangan Surat Harus Diisi.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-warning";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
     }
         
           else
@@ -420,74 +236,25 @@ if (isset($_GET['id']) AND isset($_POST['no_surat']) AND isset($_POST['t_diterim
                   $sql = mysqli_query($db, $query);
                   if($sql)
                   {
-                    ?>    
-                    <div class="col-sm-12">
-                        <div class="alert  alert-success alert-dismissible fade show" role="alert">
-                          <span class="badge badge-pill badge-success">Selamat!</span> Data berhasil diedit.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    </div>
-              
-                      <div class="content mt-3">
-                          <div class="col-lg-12">
-                              <div class="card">
-                                  <div class="card-header">
-                                  <strong>Proses</strong> Edit Data
-                                  </div>
-                                      <div class="card-body card-block">
-                  
-                  <form action="index.php?page=masuk-read" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                  
-                                      
-                                  
-                                  <button type="submit" class="btn btn-primary btn-sm" href= >
-                                    <i class="fa fa-dot-circle-o"></i> Lihat Hasil
-                                    
-                                    </button>
-                                    </form>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
-                  <?php
+                  	$not1 = "badge-success";
+                    $not2 = "Selamat!";
+                    $not3 = "Data berhasil diedit.";
+                    $not4 = "index.php?page=masuk-read";
+                    $not5 = "";
+                    $not6 = "Lihat Hasil";
+                    $not7 = "alert-success";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
                   }
                   else
                   {
-                    ?>
-                    <div class="col-sm-12">
-                            <div class="alert  alert-danger alert-dismissible fade show" role="alert">
-                              <span class="badge badge-pill badge-danger">Gagal!</span> Terjadi kesalahan saat mencoba untuk menyimpan data ke database.
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="content mt-3">
-                                <div class="col-lg-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                        <strong>Proses</strong> Edit Data
-                                        </div>
-                                            <div class="card-body card-block">
-         
-
-                        <form action="index.php?page=masuk-edit" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                                   
-                                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                                          <i class="fa fa-arrow-left"></i> Kembali
-                                          
-                                          </button>
-                                          </form>
-                                          </div>
-                                          </div>
-                                          </div>
-                                          </div>
-                                          </div>
-          <?php
+                  	$not1 = "badge-danger";
+                    $not2 = "Gagal!";
+                    $not3 = "Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
+                    $not4 = "index.php?page=masuk-edit&id=";
+                    $not5 = $id;
+                    $not6 = "Kembali";
+                    $not7 = "alert-danger";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
                   }  
     }
 
@@ -504,36 +271,12 @@ if (isset($_GET['id']) AND isset($_POST['no_surat']) AND isset($_POST['t_diterim
 
 else
 {
-  ?>
-        <div class="col-sm-12">
-                <div class="alert  alert-danger alert-dismissible fade show" role="alert">
-                  <span class="badge badge-pill badge-danger">Gagal!</span> Maaf Anda Sebelumnya Harus Mengakses Halaman Ini Pada Form Edit Surat Masuk.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            </div>
-
-        <div class="content mt-3">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                        <strong>Proses</strong> Edit Data
-                        </div>
-                            <div class="card-body card-block">
-       
-
-        <form action="index.php" method="post" enctype="multipart/form-data" class="form-horizontal">    
-                   
-                        <button type="submit" class="btn btn-primary btn-sm" href= >
-                          <i class="fa fa-arrow-left"></i> Kembali
-                          
-                          </button>
-                          </form>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-                          </div>
-        <?php
+					$not1 = "badge-danger";
+                    $not2 = "Gagal!";
+                    $not3 = "Maaf Anda Sebelumnya Harus Mengakses Halaman Ini Pada Form Edit Surat Masuk.";
+                    $not4 = "index.php";
+                    $not5 = "";
+                    $not6 = "Kembali";
+                    $not7 = "alert-danger";
+                    notif($not7,$not1,$not2,$not3,$not4,$not5,$not6);
 }
